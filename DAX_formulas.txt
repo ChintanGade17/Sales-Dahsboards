@@ -1,1 +1,7 @@
 Sales vs Budget = DIVIDE([Sales Amount], [Total Budget])
+
+Total Budget = SUM(Budget[Value])
+
+Date = CALENDARAUTO()
+
+Sales Amount = SUMX(Sales, Sales[Quantity] * Sales[UnitPrice] - Sales[DiscountAmount])
